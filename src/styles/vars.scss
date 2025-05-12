@@ -15,3 +15,5 @@ $days: (
   'sun': 6,
 );
 $calendar-width: (($cell-size * 7) + ($gap-size * 6));
+$first-child-margin-left: 6 * $cell-size + 6 * $gap-size;
+$start-date-first-child-margin: $cell-size + $gap-size;

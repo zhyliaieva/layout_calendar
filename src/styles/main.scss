@@ -19,7 +19,7 @@ body {
   @for $i from 28 through 31 {
     &--month-length-#{$i} {
       @for $k from $i through 31 {
-        :nth-child(#{$k + 1}) {
+        &__day :nth-child(#{$k + 1}) {
           display: none;
         }
       }
@@ -27,12 +27,12 @@ body {
   }
 
   & :first-child {
-    margin-left: 6 * $cell-size + 6 * $gap-size;
+    margin-left: $first-child-margin-left;
   }
 
   @each $day, $numb in $days {
     &--start-day-#{$day} :first-child {
-      margin-left: $numb * ($cell-size + $gap-size);
+      margin-left: $numb * $start-date-first-child-margin;
     }
   }
 
