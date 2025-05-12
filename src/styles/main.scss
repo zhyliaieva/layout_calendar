@@ -18,16 +18,12 @@ body {
 
   @for $i from 28 through 31 {
     &--month-length-#{$i} {
-      @for $k from $i through 31 {
-        &__day :nth-child(#{$k + 1}) {
+      @for $k from ($i + 1) through 31 {
+        &__day:nth-child(#{$k}) {
           display: none;
         }
       }
     }
-  }
-
-  & :first-child {
-    margin-left: $first-child-margin-left;
   }
 
   @each $day, $numb in $days {
